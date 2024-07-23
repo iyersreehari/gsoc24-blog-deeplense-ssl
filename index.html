@@ -138,7 +138,7 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-This blog post provides an overview of my ongoing project with <a href = "https://ml4sci.org">Machine Learning for Science (ML4Sci)</a> as part of the <a href = "https://summerofcode.withgoogle.com/programs/2024">Google Summer of Code (GSoC) 2024</a>. All the project's code is openly accessible at <a href = ""> github link to add </a><br>
+This blog post provides an overview of my ongoing project with <a href = "https://ml4sci.org"><u>Machine Learning for Science (ML4Sci)</u></a> as part of the <a href = "https://summerofcode.withgoogle.com/programs/2024"><u>Google Summer of Code (GSoC) 2024</u></a>. All the project's code is openly accessible at <a href = "https://github.com/iyersreehari/DeepLense_SSL_Sreehari_Iyer"><u>github.com/iyersreehari/DeepLense_SSL_Sreehari_Iyer</u></a><br>
           </p>
         </div>
       </div>
@@ -171,18 +171,18 @@ Strong gravitational lensing provides a means to probe dark matter substructure.
         <h2 class="title is-3">Experiment</h2>
         <div class="content has-text-justified">
           <p>
-We train and compare Vision Transformer [<a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a>] with different self supervised learning algorithms alongwith a supervised baseline. Vision Transformers split the image into fixed-size patches and linearly embed them with additional position embedding. The resulting vector representation is then fed into a standard Transformer
-encoder. The following llustration of the ViT architecture is from <a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a>
+We train and compare Vision Transformer [<a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a>] with different self supervised learning algorithms alongwith a supervised baseline. Vision Transformers split the image into fixed-size patches and linearly embed them with additional position embedding. The resulting vector representation is then fed into a standard Transformer
+encoder. The following llustration of the ViT architecture is from <a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a>
 <div class="image-container">
           <img src="static/images/vit_architecture.png" alt="ViT Architecture" style="max-width: 100%;">
-          <div class="image-caption">ViT Architecture from <a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a></div>
+          <div class="image-caption">ViT Architecture from <a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a></div>
       </div>
 For the supervised learning baseline, the ViT backbone is followed by a classifier MLP head. The hyperparameters for the classification task are chosen such that the loss computed over the validation dataset is minimized. For self-supervised learning, the ViT backbone is trained on the training dataset without the label information. The hyperparameters are chosen such that the K-NN accuracy computed over the representations obtained for the validation dataset is maximized. For evaluating the learned network, the backbone followed by a linear classifier is finetuned on the train dataset (with label information) and then evaluated over the held-out test dataset. All optimizations are performed using the Adam optimizer, with cosine annealing learning rate scheduler with warm restarts.
 <div class="image-container">
           <img src="static/images/sample_image_dataset.png" alt="Example images from the training dataset" style="max-width: 100%;">
           <div class="image-caption">Example images from the training dataset</div>
       </div>
-Each image has three channels or filters - b (blue filter), g (green filter) and i (near infrared filter). Detailed information about the filters are available at <a href="https://skyserver.sdss.org/dr1/en/proj/advanced/color/sdssfilters.asp"> SDSS Filters </a> <br>
+Each image has three channels or filters - b (blue filter), g (green filter) and i (near infrared filter). Detailed information about the filters are available at <a href="https://skyserver.sdss.org/dr1/en/proj/advanced/color/sdssfilters.asp"><u> SDSS Filters</u></a> <br>
 The dataset contains 1949 lens images and 2000 non-lens images. The dataset is split in a stratified manner into train dataset containing 0.7225 fraction of the dataset or 2852 images, validation dataset containing 0.1275 fraction of the dataset or 504 images and test dataset containing 0.15 fraction of the dataset or 593 images.<br>
 
           </p>
@@ -243,7 +243,7 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">SimSiam </h2>
-	      <h4 style="display:inline"><a href="#ref2" class="citation">[Chen, Xinlei, and Kaiming He., 2021]</a></h4>
+	      <h4 style="display:inline"><a href="#ref2" class="citation">[<u>Chen, Xinlei, and Kaiming He., 2021</u>]</a></h4>
         <div class="content has-text-justified">
           <p>
             Recent studies in self-supervised representation learning,
@@ -252,7 +252,7 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
           <!-- Simsiam architecture image -->
           <div class="image-container">
           <img src="static/images/simsiam_architecture.png" alt="SimSiam Architecture" style="max-width: 100%;">
-          <div class="image-caption">SimSiam Architecture from <a href="#ref2" class="citation">Chen, Xinlei, and Kaiming He., 2021</a></div>
+          <div class="image-caption">SimSiam Architecture from <a href="#ref2" class="citation"><u>Chen, Xinlei, and Kaiming He., 2021</u></a></div>
         </div>
           <p>
               The SimSiam architecture takes as input two randomly
@@ -301,19 +301,19 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">DINO</h2>
-	      <h4 style="display:inline"><a href="#ref3" class="citation">[Caron, Mathilde, et al., 2021]</a></h4>
+	      <h4 style="display:inline"><a href="#ref3" class="citation">[<u>Caron, Mathilde, et al., 2021</u>]</a></h4>
         <div class="content has-text-justified">         
           <!-- Simsiam architecture image -->
           <div class="image-container">
           <img src="static/images/dino_architecture.png" alt="DINO Architecture" style="max-width: 100%;">
-          <div class="image-caption">DINO Architecture from <a href="#ref3" class="citation">Caron, Mathilde, et al., 2021</a></div>
+          <div class="image-caption">DINO Architecture from <a href="#ref3" class="citation"><u>Caron, Mathilde, et al., 2021</u></a></div>
         </div>
           <p>
               The model consists of student and teacher networks.
 The output of the teacher network is centered with mean computed over a batch.
 The output of the student and the teacher networks are normalized with a temperature softmax over the feature dimension. <br>
 <br>
-[<a href="#ref4" class="citation">Zhou, Jinghao, et al., 2021</a>] Given the training set \( \mathcal{I} \), an image \( x \sim \mathcal{I} \) is sampled uniformly, over
+[<a href="#ref4" class="citation"><u>Zhou, Jinghao, et al., 2021</u></a>] Given the training set \( \mathcal{I} \), an image \( x \sim \mathcal{I} \) is sampled uniformly, over
 which two random augmentations are applied, yielding two distorted views \( u \) and \( v \). We utilize random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. 
 		  The two distorted views are then put through a teacher-student framework to get the predictive categorical distributions from the \( \texttt{[CLS]} \) token:
 \[
@@ -330,7 +330,7 @@ The knowledge is distilled from teacher to student by minimizing their cross-ent
 The teacher and the student share the same architecture consisting of a backbone \( \mathcal{f} \) 
 and a projection MLP head \( h \). A stop-gradient (sg) operator is applied on the teacher network similar to SimSiam architecture.
 <br> <br>
-Self-supervised learning is implenmented in <a href="#ref3" class="citation">Caron, Mathilde, et al., 2021</a> through different distorted views, or crops, of an image with multi-crop strategy. For a given image, a set \( V \) of different views is generated. This set contains two (or more) global views, \( x_{g1} \) and \( x_{g2} \) and several local views of smaller resolution (image cropped to cover smaller area). All crops are passed through the student network while only the global views are passed through the teacher network. <br>
+Self-supervised learning is implenmented in <a href="#ref3" class="citation"><u>Caron, Mathilde, et al., 2021</u></a> through different distorted views, or crops, of an image with multi-crop strategy. For a given image, a set \( V \) of different views is generated. This set contains two (or more) global views, \( x_{g1} \) and \( x_{g2} \) and several local views of smaller resolution (image cropped to cover smaller area). All crops are passed through the student network while only the global views are passed through the teacher network. <br>
 Thus, the objective to minimize w.r.t. the student parameter \( \theta_s \) is as follows:
 \[
 \mathcal{L}_{DINO} =  \sum_{v \in {x_{g1}, x_{g2}}} \ \sum_{u \in V, u \neq v} 
@@ -379,12 +379,12 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">iBOT</h2>
-	      <h4 style="display:inline"><a href="#ref4" class="citation">[Zhou, Jinghao, et al., 2021]</a></h4>
+	      <h4 style="display:inline"><a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></h4>
         <div class="content has-text-justified">         
          <!-- Your image here -->
          <div class="image-container">
           <img src="static/images/ibot_architecture.png" alt="iBot Architecture" style="max-width: 100%;">
-          <div class="image-caption">iBot Architecture from <a href="#ref4" class="citation">[Zhou, Jinghao, et al., 2021]</a></div>
+          <div class="image-caption">iBot Architecture from <a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></div>
       </div>
      </div>
      <div class="content has-text-justified">
