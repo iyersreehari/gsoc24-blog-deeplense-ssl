@@ -314,8 +314,8 @@ The output of the teacher network is centered with mean computed over a batch.
 The output of the student and the teacher networks are normalized with a temperature softmax over the feature dimension. <br>
 <br>
 [<a href="#ref4" class="citation">Zhou, Jinghao, et al., 2021</a>] Given the training set \( \mathcal{I} \), an image \( x \sim \mathcal{I} \) is sampled uniformly, over
-which two random augmentations are applied, yielding two distorted views \( u \) and \( v \). The two dis-
-torted views are then put through a teacher-student framework to get the predictive categorical distributions from the \( \texttt{[CLS]} \) token:
+which two random augmentations are applied, yielding two distorted views \( u \) and \( v \). We utilize random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. 
+		  The two distorted views are then put through a teacher-student framework to get the predictive categorical distributions from the \( \texttt{[CLS]} \) token:
 \[
 v^{\texttt{[CLS]}}_t = P_{\theta '}^{\texttt{[CLS]}} (v) \
 \text{ and } \
@@ -323,7 +323,7 @@ u^{\texttt{[CLS]}}_s = P_{\theta}^{\texttt{[CLS]}} (u)
 \]
 <br>
 where \( \theta ' \) denotes the parameters of the teacher network and \( \theta \) denotes the parameters of the student network. <br>
-The knowledge is distilled from teacher to student by minimizing their cross-entropy loss <br>
+The knowledge is distilled from teacher to student by minimizing their cross-entropy loss w.r.t. the student parameters \( \theta_s \) <br>
 \[
 \mathcal{L}_{\texttt{[CLS]}} (u, v) = - P_{\theta '}^{\texttt{[CLS]}} (v) \cdot \log {(P_{\theta}^{\texttt{[CLS]}} (u))}
 \]
@@ -331,7 +331,7 @@ The teacher and the student share the same architecture consisting of a backbone
 and a projection MLP head \( h \). A stop-gradient (sg) operator is applied on the teacher network similar to SimSiam architecture.
 <br> <br>
 Self-supervised learning is implenmented in <a href="#ref3" class="citation">Caron, Mathilde, et al., 2021</a> through different distorted views, or crops, of an image with multi-crop strategy. For a given image, a set \( V \) of different views is generated. This set contains two (or more) global views, \( x_{g1} \) and \( x_{g2} \) and several local views of smaller resolution (image cropped to cover smaller area). All crops are passed through the student network while only the global views are passed through the teacher network. <br>
-Thus, the objective is as follows:
+Thus, the objective to minimize w.r.t. the student parameter \( \theta_s \) is as follows:
 \[
 \mathcal{L}_{DINO} =  \sum_{v \in {x_{g1}, x_{g2}}} \ \sum_{u \in V, u \neq v} 
 - P_{\theta '}^{\texttt{[CLS]}} (v) \cdot \log {(P_{\theta}^{\texttt{[CLS]}} (u))}
@@ -400,7 +400,7 @@ The training objective of MIM in iBOT is defined as:
 \mathcal{L}_{MIM} = - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_1) \cdot log (P_{\theta}^{patch} (\hat{x}^i_1)) } - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_2) \cdot log (P_{\theta}^{patch} (\hat{x}^i_2)) }
 \]
 Here, \( N \) is the number of images in the train dataset. While implementing the self-supervised learning through multi-crop strategy as described in the previous section, the terms \( x_1 \) and \( x_2 \) correspond to the global views. 
-            
+            We again use random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. 
           </p>
       </div>
       <div class="table">
