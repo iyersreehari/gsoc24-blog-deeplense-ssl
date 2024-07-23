@@ -139,7 +139,7 @@ This blog post provides an overview of my ongoing project with <a href = "https:
   </div>
 </section>
 
-<!-- Experiment Details -->
+<!-- Intro -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -154,6 +154,7 @@ Strong gravitational lensing provides a means to probe dark matter substructure.
     </div>
   </div>
 </section>
+<!--  Intro End -->
 
 <!-- Experiment Details -->
 <section class="section hero is-light">
@@ -183,26 +184,19 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<!-- Experiment Details End -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        
-        <h2 class="subtitle has-text-centered">
-          Supervised Learning Baseline
-          <!-- img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/ -->
-        </h2>
-      </div>
-      <div class="content has-text-justified">
+<!-- Supervised Baseline -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Supervised Learning Baseline</h2>
+        <div class="content has-text-justified">
           <p>
             A supervised learning baseline is trained to compare the performance of self-supervised learning algorithms. The ViT-B and ViT-S networks are trained to minimize the cross entropy loss between the predicted labels and the actual labels for the training dataset (with the label information).  
-          </p>
+	  </p>
       </div>
       <div class="table">
             <div class="table-row">
@@ -225,10 +219,16 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
             </div>
         </div>
 
-      <div class="image-container">
-          <img src="static/images/cm_roc_supervised.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-          <div class="image-caption">Confusion Matrix and ROC for Supervised Learning Baseline</div>
+	<div class="image-container">
+	  <img src="static/images/cm_roc_supervised.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
+	  <div class="image-caption">Confusion Matrix and ROC for Supervised Learning Baseline</div>
+	</div>
       </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Supervised Baseline End -->
       
       <div class="item">
           <h2 style="display:inline">SimSiam <h4 style="display:inline"><a href="#ref2" class="citation">[Chen, Xinlei, and Kaiming He., 2021]</a></h4></h2>
