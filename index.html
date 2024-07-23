@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Learning Representation Through Self-Supervised Learning on Real Gravitational Lensing Images</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +43,57 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <title>Table with Divs</title>
+    <style>
+        .table {
+            display: table;
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        .table-row {
+            display: table-row;
+        }
+        .table-header, .table-cell {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .table-header {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+    </style>
+    <!-- Include MathJax library -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<title>Image with Caption</title>
+    <style>
+        .image-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+    
+    <title>Citations</title>
+    <style>
+        .citation {
+            font-style: italic;
+        }
+        .references {
+            margin-top: 20px;
+        }
+        .reference {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -52,66 +103,18 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Learning Representation Through Self-Supervised Learning on Real Gravitational Lensing Images</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="AUTHOR PERSONAL LINK" target="iyersreehari.github.io">Sreehari Iyer</a></span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                <div class="is-size-5 publication-authors">
+                    <span class="author-block">Indian Institute of Technology Madras<br>
+                </span> </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                  
                 </a>
               </span>
             </div>
@@ -122,25 +125,21 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+This blog post provides an overview of my ongoing project with <a href = "https://ml4sci.org">Machine Learning for Science (ML4Sci)</a> as part of the <a href = "https://summerofcode.withgoogle.com/programs/2024">Google Summer of Code (GSoC) 2024</a>. All the project's code is openly accessible at <a href = ""> github link to add </a><br>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
-<!-- Paper abstract -->
+<!-- Experiment Details -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -148,7 +147,36 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+Strong gravitational lensing provides a means to probe dark matter substructure. In recent years, machine learning techniques, particularly supervised learning, are being utilized for substructure detection, and other regression and classification tasks on the lensing dataset. With strong gravitational lensing, the available labeled training data is scarce. Supervised learning requires abundant labeled training data and can be biased by class imbalances in the training dataset. To circumvent this, previous works have utilized simulated lensing dataset for supervised learning. However, this approach may result in diminished performance on running inferences with real datasets. In computer vision, self-supervised learning (SSL) has emerged as a potent solution, particularly effective in scenarios with abundant unlabeled data and scarce labeled data. Recent works have studied convolutional neural network (CNN) based SSL with simulated lensing data. This project focuses on evaluating of self-supervised learning techniques with Transformers utilizing real-world strong gravitational lensing dataset.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experiment Details -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiment</h2>
+        <div class="content has-text-justified">
+          <p>
+We train and compare Vision Transformer [<a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a>] with different self supervised learning algorithms alongwith a supervised baseline. Vision Transformers split the image into fixed-size patches and linearly embed them with additional position embedding. The resulting vector representation is then fed into a standard Transformer
+encoder. The following llustration of the ViT architecture is from <a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a>
+<div class="image-container">
+          <img src="static/images/vit_architecture.png" alt="ViT Architecture" style="max-width: 100%;">
+          <div class="image-caption">ViT Architecture from <a href="#ref1" class="citation">Dosovitskiy, Alexey, et al., 2020</a></div>
+      </div>
+For the supervised learning baseline, the ViT backbone is followed by a classifier MLP head. The hyperparameters for the classification task are chosen such that the loss computed over the validation dataset is minimized. For self-supervised learning, the ViT backbone is trained on the training dataset without the label information. The hyperparameters are chosen such that the K-NN accuracy computed over the representations obtained for the validation dataset is maximized. For evaluating the learned network, the backbone followed by a linear classifier is finetuned on the train dataset (with label information) and then evaluated over the held-out test dataset. All optimizations are performed using the Adam optimizer, with cosine annealing learning rate scheduler with warm restarts.
+<div class="image-container">
+          <img src="static/images/sample_image_dataset.png" alt="Example images from the training dataset" style="max-width: 100%;">
+          <div class="image-caption">Example images from the training dataset</div>
+      </div>
+Each image has three channels or filters - b (blue filter), g (green filter) and i (near infrared filter). Detailed information about the filters are available at <a href="https://skyserver.sdss.org/dr1/en/proj/advanced/color/sdssfilters.asp"> SDSS Filters </a> <br>
+The dataset contains 1949 lens images and 2000 non-lens images. The dataset is split in a stratified manner into train dataset containing 0.7225 fraction of the dataset or 2852 images, validation dataset containing 0.1275 fraction of the dataset or 504 images and test dataset containing 0.15 fraction of the dataset or 593 images.<br>
+
           </p>
         </div>
       </div>
@@ -165,32 +193,208 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Supervised Learning Baseline
+          <!-- img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/ -->
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      <div class="content has-text-justified">
+          <p>
+            A supervised learning baseline is trained to compare the performance of self-supervised learning algorithms. The ViT-B and ViT-S networks are trained to minimize the cross entropy loss between the predicted labels and the actual labels for the training dataset (with the label information).  
+          </p>
       </div>
+      <div class="table">
+            <div class="table-row">
+                <div class="table-header">Model</div>
+                <div class="table-header"># Parameters</div>
+                <div class="table-header">Accuracy</div>
+                <div class="table-header">AUC Score</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-S (patch size: 16)</div>
+                <div class="table-cell">22M</div>
+                <div class="table-cell">91.3997 %</div>
+                <div class="table-cell">0.9780</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 16)</div>
+                <div class="table-cell">86M</div>
+                <div class="table-cell">92.2428 %</div>
+                <div class="table-cell">0.9762</div>
+            </div>
+        </div>
+
+      <div class="image-container">
+          <img src="static/images/cm_roc_supervised.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
+          <div class="image-caption">Confusion Matrix and ROC for Supervised Learning Baseline</div>
+      </div>
+      
       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
+          <h2 style="display:inline">SimSiam <h4 style="display:inline"><a href="#ref2" class="citation">[Chen, Xinlei, and Kaiming He., 2021]</a></h4></h2>
+      </div>
+        
+      </div>
+      <div class="content has-text-justified">
+          <p>
+            Recent studies in self-supervised representation learning,
+            utilize methods involving certain forms of Siamese networks.  
+          </p>
+          <!-- Simsiam architecture image -->
+          <div class="image-container">
+          <img src="static/images/simsiam_architecture.png" alt="SimSiam Architecture" style="max-width: 100%;">
+          <div class="image-caption">SimSiam Architecture from <a href="#ref2" class="citation">Chen, Xinlei, and Kaiming He., 2021</a></div>
+        </div>
+          <p>
+              The SimSiam architecture takes as input two randomly
+augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. <br> The architecture consists an encoder network \( f \) followed by a prediction MLP head \( h \). The encoder network \( f \) consists of the backbone network followed by a projection MLP. <br>
+    Let the cosine similarity between the output vectors \( p_1 = h(f(x_1)) \) and \( z_2 = f(x_2) \) be \[ \mathcal{D} (p_1, z_2) = \frac{p_1}{|| p_1 ||_2} \cdot \frac{z_2}{|| z_2 ||_2} \]
+    The objective of SimSiam is to minimize the symmetrized loss defined as follows:
+    \[ \mathcal{L} = - \frac{1}{2} \mathcal{D} (p_1, z_2) - \frac{1}{2} \mathcal{D} (p_2, z_1) \]
+    Further, the architecture utilizes stop-gradient operation to avoid representation collapse which may cause the optimizer to quickly obtain a degenerated solution reaching the minimum possible loss of −1. <br>
+    The evaluation results on the test dataset after finetuning the architecture on the train dataset are given below
+          </p>
+      </div>
+      <div class="table">
+            <div class="table-row">
+                <div class="table-header">Model</div>
+                <div class="table-header"># Parameters</div>
+                <div class="table-header">Accuracy</div>
+                <div class="table-header">AUC Score</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-S (patch size: 16)</div>
+                <div class="table-cell">22M</div>
+                <div class="table-cell">Row 1, Cell 2</div>
+                <div class="table-cell">Row 1, Cell 3</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 16)</div>
+                <div class="table-cell">86M</div>
+                <div class="table-cell">Row 2, Cell 2</div>
+                <div class="table-cell">Row 2, Cell 3</div>
+            </div>
+        </div>
+      <div class="image-container">
+          <img src="static/images/cm_roc_simsiam.png" alt="SimSiam Evaluation" style="max-width: 100%;">
+          <div class="image-caption">Confusion Matrix and ROC for SimSiam</div>
+      </div>
+      
+      <div class="item">
+        <h2 style="display:inline">DINO <h4 style="display:inline"><a href="#ref3" class="citation">[Caron, Mathilde, et al., 2021]</a></h4></h2>
+         
+          <!-- Simsiam architecture image -->
+          <div class="image-container">
+          <img src="static/images/dino_architecture.png" alt="DINO Architecture" style="max-width: 100%;">
+          <div class="image-caption">DINO Architecture from <a href="#ref3" class="citation">Caron, Mathilde, et al., 2021</a></div>
+        </div>
+          <p>
+              The model consists of student and teacher networks.
+The output of the teacher network is centered with mean computed over a batch.
+The output of the student and the teacher networks are normalized with a temperature softmax over the feature dimension. <br>
+<br>
+[<a href="#ref4" class="citation">Zhou, Jinghao, et al., 2021</a>] Given the training set \( \mathcal{I} \), an image \( x \sim \mathcal{I} \) is sampled uniformly, over
+which two random augmentations are applied, yielding two distorted views \( u \) and \( v \). The two dis-
+torted views are then put through a teacher-student framework to get the predictive categorical distributions from the \( \texttt{[CLS]} \) token:
+\[
+v^{\texttt{[CLS]}}_t = P_{\theta '}^{\texttt{[CLS]}} (v) \
+\text{ and } \
+u^{\texttt{[CLS]}}_s = P_{\theta}^{\texttt{[CLS]}} (u)
+\]
+<br>
+where \( \theta ' \) denotes the parameters of the teacher network and \( \theta \) denotes the parameters of the student network. <br>
+The knowledge is distilled from teacher to student by minimizing their cross-entropy loss <br>
+\[
+\mathcal{L}_{\texttt{[CLS]}} (u, v) = - P_{\theta '}^{\texttt{[CLS]}} (v) \cdot \log {(P_{\theta}^{\texttt{[CLS]}} (u))}
+\]
+The teacher and the student share the same architecture consisting of a backbone \( \mathcal{f} \) 
+and a projection MLP head \( h \). A stop-gradient (sg) operator is applied on the teacher network similar to SimSiam architecture.
+<br> <br>
+Self-supervised learning is implenmented in <a href="#ref3" class="citation">Caron, Mathilde, et al., 2021</a> through different distorted views, or crops, of an image with multi-crop strategy. For a given image, a set \( V \) of different views is generated. This set contains two (or more) global views, \( x_{g1} \) and \( x_{g2} \) and several local views of smaller resolution (image cropped to cover smaller area). All crops are passed through the student network while only the global views are passed through the teacher network. <br>
+Thus, the objective is as follows:
+\[
+\mathcal{L}_{DINO} =  \sum_{v \in {x_{g1}, x_{g2}}} \ \sum_{u \in V, u \neq v} 
+- P_{\theta '}^{\texttt{[CLS]}} (v) \cdot \log {(P_{\theta}^{\texttt{[CLS]}} (u))}
+\]
+The teacher parameters \( \theta_t \) are updated with
+an exponential moving average (ema) of the student parameters \( \theta_s \).
+
+    The evaluation results on the test dataset after finetuning the architecture on the train dataset are given below 
+          </p>
+      </div>
+      <div class="table">
+            <div class="table-row">
+                <div class="table-header">Model</div>
+                <div class="table-header"># Parameters</div>
+                <div class="table-header">Accuracy</div>
+                <div class="table-header">AUC Score</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-S (patch size: 16)</div>
+                <div class="table-cell">22M</div>
+                <div class="table-cell">Row 1, Cell 2</div>
+                <div class="table-cell">Row 1, Cell 3</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 16)</div>
+                <div class="table-cell">86M</div>
+                <div class="table-cell">Row 2, Cell 2</div>
+                <div class="table-cell">Row 2, Cell 3</div>
+            </div>
+        </div>
+        <div class="image-container">
+          <img src="static/images/cm_roc_dino.png" alt="DINO Evaluation" style="max-width: 100%;">
+          <div class="image-caption">Confusion Matrix and ROC for DINO</div>
+      </div>
+      
      <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+        <h2 style="display:inline">iBot <h4 style="display:inline"><a href="#ref4" class="citation">Zhou, Jinghao, et al., 2021</a></h4></h2>
+         <!-- Your image here -->
+         <div class="image-container">
+          <img src="static/images/ibot_architecture.png" alt="iBot Architecture" style="max-width: 100%;">
+          <div class="image-caption">iBot Architecture from <a href="#ref4" class="citation">[Zhou, Jinghao, et al., 2021]</a></div>
+      </div>
+     </div>
+     <div class="content has-text-justified">
+          <p>
+            iBot objective is a linear combination of the DINO loss and the Masked Image Modelling (MIM) loss.
+            \[
+            \lambda_1 \cdot \mathcal{L}_{DINO} + \lambda_2 \cdot \mathcal{L}_{MIM}
+            \]
+            where \( \mathcal{L}_{DINO} \) is the objective to be minimized in DINO as described in the previous section and \( \lambda_1 \), \( \lambda_2 \) are hyperparameters.<br>
+            The objective is minimized with respect to \( \theta_s \), the parameters of the student network. The parameters of the teacher network \( \theta_t \) are updated with an exponential moving average (ema) of the student parameters. To compute the MIM loss, a blockwise mask is applied to the two augmented views \( x_1 \), \( x_2 \) of the same image \( x \) and their corresponding masked views \( \hat{x}_1 \) and \( \hat{x}_2 \) are obtained. This is achieved by masking random contiguous blocks of image patches, effectively covering square-shaped regions with continuous blocks.   
+The training objective of MIM in iBOT is defined as:
+\[
+\mathcal{L}_{MIM} = - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_1) \cdot log (P_{\theta}^{patch} (\hat{x}^i_1)) } - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_2) \cdot log (P_{\theta}^{patch} (\hat{x}^i_2)) }
+\]
+Here, \( N \) is the number of images in the train dataset. While implementing the self-supervised learning through multi-crop strategy as described in the previous section, the terms \( x_1 \) and \( x_2 \) correspond to the global views. 
+            
+          </p>
+      </div>
+      <div class="table">
+            <div class="table-row">
+                <div class="table-header">Model</div>
+                <div class="table-header"># Parameters</div>
+                <div class="table-header">Accuracy</div>
+                <div class="table-header">AUC Score</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-S (patch size: 16)</div>
+                <div class="table-cell">22M</div>
+                <div class="table-cell">Row 1, Cell 2</div>
+                <div class="table-cell">Row 1, Cell 3</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 16)</div>
+                <div class="table-cell">86M</div>
+                <div class="table-cell">Row 2, Cell 2</div>
+                <div class="table-cell">Row 2, Cell 3</div>
+            </div>
+        </div>
+        <div class="image-container">
+          <img src="static/images/cm_roc_ibot.png" alt="iBot Evaluation" style="max-width: 100%;">
+          <div class="image-caption">Confusion Matrix and ROC for iBot</div>
+      </div>
   </div>
 </div>
 </div>
@@ -200,88 +404,34 @@
 
 
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>BibTex Code Here</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
+
+<h2>References</h2>
+<div class="references">
+    <div class="reference" id="ref1">
+        Dosovitskiy, Alexey, et al. <i>An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale.</i> International Conference on Learning Representations. 2020.
+    </div>
+    <div class="reference" id="ref2">
+        Chen, Xinlei, and Kaiming He. <i>Exploring simple siamese representation learning.</i> Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2021.
+    </div>
+    <div class="reference" id="ref3">
+        Caron, Mathilde, et al. <i>Emerging properties in self-supervised vision transformers.</i> Proceedings of the IEEE/CVF international conference on computer vision. 2021.
+    </div>
+    <div class="reference" id="ref4">
+        Zhou, Jinghao, et al. <i>ibot: Image bert pre-training with online tokenizer.</i> arXiv preprint arXiv:2111.07832 (2021).
+    </div> 
+</div>
+
+<h2>Conclusion and Future Work</h2>
+<div class="conclusion">
+</div>
 
 
   <footer class="footer">
@@ -292,7 +442,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
