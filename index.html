@@ -483,33 +483,32 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">iBOT</h2>
-	      <h4 style="display:inline"><a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></h4>
-        <div class="content has-text-justified">         
-         <!-- Your image here -->
-         <div class="image-container">
-          <img src="static/images/ibot_architecture.png" alt="iBot Architecture" style="max-width: 100%;">
-          <div class="image-caption">iBot Architecture from <a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></div>
-      </div>
-     </div>
-     <div class="content has-text-justified">
-          <p>
-            iBot objective is a linear combination of the DINO loss and the Masked Image Modelling (MIM) loss.
-            \[
-            \lambda_1 \cdot \mathcal{L}_{DINO} + \lambda_2 \cdot \mathcal{L}_{MIM}
-            \]
-            where \( \mathcal{L}_{DINO} \) is the objective to be minimized in DINO as described in the previous section and \( \lambda_1 \), \( \lambda_2 \) are hyperparameters.<br>
-            The objective is minimized with respect to \( \theta_s \), the parameters of the student network. The parameters of the teacher network \( \theta_t \) are updated with an exponential moving average (ema) of the student parameters. To compute the MIM loss, a blockwise mask is applied to the two augmented views \( x_1 \), \( x_2 \) of the same image \( x \) and their corresponding masked views \( \hat{x}_1 \) and \( \hat{x}_2 \) are obtained. This is achieved by masking random contiguous blocks of image patches, effectively covering square-shaped regions with continuous blocks.   
-The training objective of MIM in iBOT is defined as:
-\[
-\mathcal{L}_{MIM} = - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_1) \cdot log (P_{\theta}^{patch} (\hat{x}^i_1)) } - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_2) \cdot log (P_{\theta}^{patch} (\hat{x}^i_2)) }
-\]
-Here, \( N \) is the number of images in the train dataset. While implementing the self-supervised learning through multi-crop strategy as described in the previous section, the terms \( x_1 \) and \( x_2 \) correspond to the global views. 
-            We again use random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. 
-          </p>
-      </div>
-    </div>
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">iBOT</h2>
+	        <h4 style="display:inline"><a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></h4>
+          <div class="content has-text-justified">         
+            <!-- Your image here -->
+              <div class="image-container">
+                <img src="static/images/ibot_architecture.png" alt="iBot Architecture" style="max-width: 100%;">
+                <div class="image-caption">iBot Architecture from <a href="#ref4" class="citation">[<u>Zhou, Jinghao, et al., 2021</u>]</a></div>
+                </div>
+              </div>
+              <div class="content has-text-justified">
+              <p>
+                iBot objective is a linear combination of the DINO loss and the Masked Image Modelling (MIM) loss.
+                \[
+                \lambda_1 \cdot \mathcal{L}_{DINO} + \lambda_2 \cdot \mathcal{L}_{MIM}
+                \]
+                where \( \mathcal{L}_{DINO} \) is the objective to be minimized in DINO as described in the previous section and \( \lambda_1 \), \( \lambda_2 \) are hyperparameters.<br>
+                The objective is minimized with respect to \( \theta_s \), the parameters of the student network. The parameters of the teacher network \( \theta_t \) are updated with an exponential moving average (ema) of the student parameters. To compute the MIM loss, a blockwise mask is applied to the two augmented views \( x_1 \), \( x_2 \) of the same image \( x \) and their corresponding masked views \( \hat{x}_1 \) and \( \hat{x}_2 \) are obtained. This is achieved by masking random contiguous blocks of image patches, effectively covering square-shaped regions with continuous blocks.   
+    The training objective of MIM in iBOT is defined as:
+    \[
+    \mathcal{L}_{MIM} = - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_1) \cdot log (P_{\theta}^{patch} (\hat{x}^i_1)) } - \sum_{i=1}^N {m_i \cdot P_{\theta'}^{patch} (x^i_2) \cdot log (P_{\theta}^{patch} (\hat{x}^i_2)) }
+    \]
+    Here, \( N \) is the number of images in the train dataset. While implementing the self-supervised learning through multi-crop strategy as described in the previous section, the terms \( x_1 \) and \( x_2 \) correspond to the global views. 
+                We again use random horizontal flips, random brightness and contrast jitter and random gaussian blur for obtaining the augmentations. 
+              </p>
+              </div>
     <div class="table">
       <div class="table-row">
           <div class="table-header">Backbone</div>
@@ -567,17 +566,17 @@ Here, \( N \) is the number of images in the train dataset. While implementing t
       </div>
   </div>
 
-<div class="image-row">
-  <div class="image-container-one">
-      <img src="static/images/auc_supervised_ibot_ssl_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-      <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
-  </div>
+  <div class="image-row">
+    <div class="image-container-one">
+        <img src="static/images/auc_supervised_ibot_ssl_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
+        <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
+    </div>
 
-  <div class="image-container-one">
-      <img src="static/images/auc_supervised_ibot_ssl_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
-      <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+    <div class="image-container-one">
+        <img src="static/images/auc_supervised_ibot_ssl_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
+        <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+    </div>
   </div>
-</div>
       </div>
       </div>
     </div>
@@ -593,8 +592,8 @@ Here, \( N \) is the number of images in the train dataset. While implementing t
       <div class="column is-four-fifths">
         <h2 class="title is-3">Conclusion</h2>
 	<div class="content has-text-justified"> 
-	In this blog, I have presented some of the SSL algorithms that have been evaluated on the lensing dataset.
-	The SSL algorithms have a marginal improvement over the supervised baseline. This may be due to the small size of the dataset.
+	In this blog, I have presented some of the SSL algorithms that have been evaluated on the real lensing dataset.
+	
 	</div>
       </div>
     </div>
