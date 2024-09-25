@@ -69,6 +69,21 @@
     <!-- Include MathJax library -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <style>
+      .image-row {
+          display: flex;
+          justify-content: space-around;
+      }
+      .image-container {
+          text-align: center;
+          width: 45%; /* Adjust the width to fit your design */
+      }
+      .image-caption {
+          margin-top: 8px;
+          font-style: italic;
+          color:#555;
+      }
+  </style>
 	<title>Image with Caption</title>
     <style>
         .image-container {
@@ -203,34 +218,78 @@ To understand how well SSL works with different fractions of labelled and unlabe
         <h2 class="title is-3">Supervised Learning Baseline</h2>
         <div class="content has-text-justified">
           <p>
-            A supervised learning baseline is trained to compare the performance of self-supervised learning algorithms. The ViT-B and ViT-S networks are trained to minimize the cross entropy loss between the predicted labels and the actual labels for the training dataset (with the label information).  
+            A supervised learning baseline is trained to compare the performance of self-supervised learning algorithms. 
+            The ViT-B and ViT-S networks are trained to minimize the cross entropy loss between the predicted labels and the actual labels for the training dataset (with the label information).  
 	  </p>
       </div>
       <div class="table">
             <div class="table-row">
-                <div class="table-header">Model</div>
-                <div class="table-header"># Parameters</div>
+                <div class="table-header">Backbone</div>
+                <div class="table-header"># labelled data for<br>training/fine-tuning</div>
                 <div class="table-header">Accuracy</div>
                 <div class="table-header">AUC Score</div>
             </div>
             <div class="table-row">
-                <div class="table-cell">ViT-S (patch size: 16)</div>
-                <div class="table-cell">22M</div>
-                <div class="table-cell">91.3997 %</div>
-                <div class="table-cell">0.9780</div>
+                <div class="table-cell">ViT-S (patch size: 8)</div>
+                <div class="table-cell">300</div>
+                <div class="table-cell">86.0034%</div>
+                <div class="table-cell">0.9235</div>
             </div>
             <div class="table-row">
-                <div class="table-cell">ViT-B (patch size: 16)</div>
-                <div class="table-cell">86M</div>
-                <div class="table-cell">92.2428 %</div>
-                <div class="table-cell">0.9762</div>
+                <div class="table-cell">ViT-B (patch size: 8)</div>
+                <div class="table-cell">300</div>
+                <div class="table-cell">86.6779%</div>
+                <div class="table-cell">0.9339</div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">ViT-S (patch size: 8)</div>
+              <div class="table-cell">600</div>
+              <div class="table-cell">88.0270%</div>
+              <div class="table-cell">0.9210</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 8)</div>
+                <div class="table-cell">600</div>
+                <div class="table-cell">88.3642%</div>
+                <div class="table-cell">0.9371</div>
+            </div>
+            <div class="table-row"></div>
+              <div class="table-cell">ViT-S (patch size: 8)</div>
+              <div class="table-cell">1200</div>
+              <div class="table-cell">89.5447%</div>
+              <div class="table-cell">0.9663</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 8)</div>
+                <div class="table-cell">1200</div>
+                <div class="table-cell">90.7251%</div>
+                <div class="table-cell">0.9698</div>
+            </div>
+            <div class="table-row"></div>
+              <div class="table-cell">ViT-S (patch size: 8)</div>
+              <div class="table-cell">3256</div>
+              <div class="table-cell">93.7605%</div>
+              <div class="table-cell">0.9786</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">ViT-B (patch size: 8)</div>
+                <div class="table-cell">3256</div>
+                <div class="table-cell">93.0860%</div>
+                <div class="table-cell">0.9786</div>
             </div>
         </div>
 
-	<div class="image-container">
-	  <img src="static/images/cm_roc_supervised.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-	  <div class="image-caption">Confusion Matrix and ROC for Supervised Learning Baseline</div>
-	</div>
+      <div class="image-row">
+        <div class="image-container">
+            <img src="static/images/auc_supervised_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
+            <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
+        </div>
+    
+        <div class="image-container">
+            <img src="static/images/auc_supervised_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
+            <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+        </div>
+      </div>
       </div>
       </div>
     </div>
