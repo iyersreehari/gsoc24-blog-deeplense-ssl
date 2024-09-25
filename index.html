@@ -170,8 +170,8 @@ Strong gravitational lensing provides a means to probe dark matter substructure.
       <div class="column is-four-fifths">
         <h2 class="title is-3">Experiment</h2>
         <div class="content has-text-justified">
-          <p>
-We train and compare Vision Transformer [<a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a>] with different self supervised learning algorithms alongwith a supervised baseline. Vision Transformers split the image into fixed-size patches and linearly embed them with additional position embedding. The resulting vector representation is then fed into a standard Transformer
+          <p> This project focuses on evaluating of self-supervised learning techniques with Transformers utilizing real-world strong gravitational lensing dataset. The learned representations are then evaluated on the downstream task to classify lens and non-lens images. 
+            We train and compare Vision Transformer [<a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a>] with different self supervised learning algorithms alongwith a supervised baseline. Vision Transformers split the image into fixed-size patches and linearly embed them with additional position embedding. The resulting vector representation is then fed into a standard Transformer
 encoder. The following llustration of the ViT architecture is from <a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a>
 <div class="image-container">
           <img src="static/images/vit_architecture.png" alt="ViT Architecture" style="max-width: 100%;">
@@ -183,8 +183,9 @@ For the supervised learning baseline, the ViT backbone is followed by a classifi
           <div class="image-caption">Example images from the training dataset</div>
       </div>
 Each image has three channels or filters - b (blue filter), g (green filter) and i (near infrared filter). Detailed information about the filters are available at <a href="https://skyserver.sdss.org/dr1/en/proj/advanced/color/sdssfilters.asp"><u> SDSS Filters</u></a> <br>
-The dataset contains 1949 lens images and 2000 non-lens images. The dataset is split in a stratified manner into train dataset containing 0.7225 fraction of the dataset or 2852 images, validation dataset containing 0.1275 fraction of the dataset or 504 images and test dataset containing 0.15 fraction of the dataset or 593 images.<br>
-
+The dataset contains 1949 lens images and 2000 non-lens images. The dataset is split in a stratified manner into train dataset containing 85 percentage of the dataset, and test dataset containing the rest 15 percentage of the dataset.<br>
+The images are center cropped to 32 × 32 pixel as this empirically resulted in better prediction accuracy. 
+To understand how well SSL works with different fractions of labelled and unlabelled data, the models are pre-trained through self supervision on the entire data and then finetuned on the labelled fraction and compared with supervised baseline trained only on that labeled fraction. 
           </p>
         </div>
       </div>
@@ -238,7 +239,8 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
 <!-- Supervised Baseline End -->
 
 <!-- SimSiam -->
-<section class="section hero is-light">
+
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -249,7 +251,6 @@ The dataset contains 1949 lens images and 2000 non-lens images. The dataset is s
             Recent studies in self-supervised representation learning,
             utilize methods involving certain forms of Siamese networks.  
           </p>
-          <!-- Simsiam architecture image -->
           <div class="image-container">
           <img src="static/images/simsiam_architecture.png" alt="SimSiam Architecture" style="max-width: 100%;">
           <div class="image-caption">SimSiam Architecture from <a href="#ref2" class="citation"><u>Chen, Xinlei, and Kaiming He., 2021</u></a></div>
@@ -292,7 +293,7 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- SimSiam End -->
 	
 <!-- dino -->
