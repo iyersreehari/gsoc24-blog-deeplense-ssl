@@ -234,50 +234,50 @@ To understand how well SSL works with different fractions of labelled and unlabe
             <div class="table-row">
                 <div class="table-cell">ViT-S (patch size: 8)</div>
                 <div class="table-cell">300</div>
-                <div class="table-cell">86.0034%</div>
-                <div class="table-cell">0.9235</div>
+                <div class="table-cell">89.7098%</div>
+                <div class="table-cell">0.9553</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
                 <div class="table-cell">300</div>
-                <div class="table-cell">86.6779%</div>
-                <div class="table-cell">0.9339</div>
+                <div class="table-cell">90.7652%</div>
+                <div class="table-cell">0.9534</div>
             </div>
             <div class="table-row">
               <div class="table-cell">ViT-S (patch size: 8)</div>
               <div class="table-cell">600</div>
-              <div class="table-cell">88.0270%</div>
-              <div class="table-cell">0.9210</div>
+              <div class="table-cell">92.2164%</div>
+              <div class="table-cell">0.9445</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
                 <div class="table-cell">600</div>
-                <div class="table-cell">88.3642%</div>
-                <div class="table-cell">0.9371</div>
+                <div class="table-cell">92.6121%</div>
+                <div class="table-cell">0.9579</div>
             </div>
             <div class="table-row">
               <div class="table-cell">ViT-S (patch size: 8)</div>
               <div class="table-cell">1200</div>
-              <div class="table-cell">89.5447%</div>
-              <div class="table-cell">0.9663</div>
+              <div class="table-cell">93.1398%</div>
+              <div class="table-cell">0.9780</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
                 <div class="table-cell">1200</div>
-                <div class="table-cell">90.7251%</div>
-                <div class="table-cell">0.9698</div>
+                <div class="table-cell">93.4037%</div>
+                <div class="table-cell">0.9678</div>
             </div>
             <div class="table-row">
               <div class="table-cell">ViT-S (patch size: 8)</div>
-              <div class="table-cell">3256</div>
-              <div class="table-cell">93.7605%</div>
-              <div class="table-cell">0.9786</div>
+              <div class="table-cell">-</div>
+              <div class="table-cell">94.9868%</div>
+              <div class="table-cell">0.9861</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
-                <div class="table-cell">3256</div>
-                <div class="table-cell">93.0860%</div>
-                <div class="table-cell">0.9786</div>
+                <div class="table-cell">-</div>
+                <div class="table-cell">94.9868%</div>
+                <div class="table-cell">0.9843</div>
             </div>
         </div>
 
@@ -301,7 +301,7 @@ To understand how well SSL works with different fractions of labelled and unlabe
 
 <!-- SimSiam -->
 
-<!-- <section class="section hero is-light">
+<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -327,25 +327,61 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
           </p>
       </div>
       <div class="table">
-            <div class="table-row">
-                <div class="table-header">Model</div>
-                <div class="table-header"># Parameters</div>
-                <div class="table-header">Accuracy</div>
-                <div class="table-header">AUC Score</div>
-            </div>
-            <div class="table-row">
-                <div class="table-cell">ViT-S (patch size: 16)</div>
-                <div class="table-cell">22M</div>
-                <div class="table-cell">91.5683 %</div>
-                <div class="table-cell">0.9703</div>
-            </div>
-            <div class="table-row">
-                <div class="table-cell">ViT-B (patch size: 16)</div>
-                <div class="table-cell">86M</div>
-                <div class="table-cell">91.5683 %</div>
-                <div class="table-cell">0.9651</div>
-            </div>
+        <div class="table-row">
+            <div class="table-header">Backbone</div>
+            <div class="table-header"># labelled data for<br>training/fine-tuning</div>
+            <div class="table-header">Accuracy</div>
+            <div class="table-header">AUC Score</div>
         </div>
+        <div class="table-row">
+            <div class="table-cell">ViT-S (patch size: 8)</div>
+            <div class="table-cell">300</div>
+            <div class="table-cell">88.3905%</div>
+            <div class="table-cell">0.9291</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">ViT-B (patch size: 8)</div>
+            <div class="table-cell">300</div>
+            <div class="table-cell">90.3694%</div>
+            <div class="table-cell">0.9539</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">ViT-S (patch size: 8)</div>
+          <div class="table-cell">600</div>
+          <div class="table-cell">91.2929%</div>
+          <div class="table-cell">0.9497</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">ViT-B (patch size: 8)</div>
+            <div class="table-cell">600</div>
+            <div class="table-cell">92.0844%</div>
+            <div class="table-cell">0.9589</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">ViT-S (patch size: 8)</div>
+          <div class="table-cell">1200</div>
+          <div class="table-cell">94.1953%</div>
+          <div class="table-cell">0.9794</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">ViT-B (patch size: 8)</div>
+            <div class="table-cell">1200</div>
+            <div class="table-cell">93.5356%</div>
+            <div class="table-cell">0.9817</div>
+        </div>
+        <div class="table-row">
+          <div class="table-cell">ViT-S (patch size: 8)</div>
+          <div class="table-cell">-</div>
+          <div class="table-cell">93.5356%</div>
+          <div class="table-cell">0.9786</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">ViT-B (patch size: 8)</div>
+            <div class="table-cell">-</div>
+            <div class="table-cell">94.8549%</div>
+            <div class="table-cell">0.9832</div>
+        </div>
+      </div>
       <div class="image-container">
           <img src="static/images/cm_roc_simSiam.png" alt="SimSiam Evaluation" style="max-width: 100%;">
           <div class="image-caption">Confusion Matrix and ROC for SimSiam</div>
@@ -354,7 +390,7 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- SimSiam End -->
 	
 <!-- dino -->
@@ -414,50 +450,50 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
         <div class="table-row">
             <div class="table-cell">ViT-S (patch size: 8)</div>
             <div class="table-cell">300</div>
-            <div class="table-cell">88.1956%</div>
-            <div class="table-cell">0.9382</div>
+            <div class="table-cell">92.4802%</div>
+            <div class="table-cell">0.9728</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">300</div>
-            <div class="table-cell">89.5447%</div>
-            <div class="table-cell">0.9487</div>
+            <div class="table-cell">90.1055%</div>
+            <div class="table-cell">0.9716</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">600</div>
-          <div class="table-cell">89.5447%</div>
-          <div class="table-cell">0.9361</div>
+          <div class="table-cell">92.7441%</div>
+          <div class="table-cell">0.9574</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">600</div>
-            <div class="table-cell">89.5447%</div>
-            <div class="table-cell">0.9376</div>
+            <div class="table-cell">91.6887%</div>
+            <div class="table-cell">0.9685</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">1200</div>
-          <div class="table-cell">91.9056%</div>
-          <div class="table-cell">0.9710</div>
+          <div class="table-cell">94.1953%/div>
+          <div class="table-cell">0.9884</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">1200</div>
-            <div class="table-cell">92.5801%</div>
-            <div class="table-cell">0.9768</div>
+            <div class="table-cell">92.6121%</div>
+            <div class="table-cell">0.9827</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
-          <div class="table-cell">3256</div>
-          <div class="table-cell">93.4233%</div>
-          <div class="table-cell">0.9748</div>
+          <div class="table-cell">-</div>
+          <div class="table-cell">95.7784%</div>
+          <div class="table-cell">0.9875</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
-            <div class="table-cell">3256</div>
-            <div class="table-cell">94.6037%</div>
-            <div class="table-cell">0.9810</div>
+            <div class="table-cell">-</div>
+            <div class="table-cell">94.3272%</div>
+            <div class="table-cell">0.9805</div>
         </div>
     </div>
 
@@ -519,50 +555,50 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
       <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">300</div>
-          <div class="table-cell">88.7015%</div>
-          <div class="table-cell">0.9423</div>
+          <div class="table-cell">92.3483%</div>
+          <div class="table-cell">0.9738</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">300</div>
-          <div class="table-cell">89.0388%</div>
-          <div class="table-cell">0.9420</div>
+          <div class="table-cell">91.1609%</div>
+          <div class="table-cell">0.9708</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
         <div class="table-cell">600</div>
-        <div class="table-cell">89.7133%</div>
-        <div class="table-cell">0.9572</div>
+        <div class="table-cell">92.3483%</div>
+        <div class="table-cell">0.9609</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">600</div>
-          <div class="table-cell">90.0506%</div>
-          <div class="table-cell">0.9498</div>
+          <div class="table-cell">91.9525%</div>
+          <div class="table-cell">0.9707</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
         <div class="table-cell">1200</div>
-        <div class="table-cell">92.0742%</div>
-        <div class="table-cell">0.9715</div>
+        <div class="table-cell">93.1398%</div>
+        <div class="table-cell">0.9827</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">1200</div>
-          <div class="table-cell">92.7487%</div>
-          <div class="table-cell">0.9717</div>
+          <div class="table-cell">93.1398%</div>
+          <div class="table-cell">0.9867</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
-        <div class="table-cell">3256</div>
-        <div class="table-cell">93.7605%</div>
-        <div class="table-cell">0.9830</div>
+        <div class="table-cell">-</div>
+        <div class="table-cell">95.1187%</div>
+        <div class="table-cell">0.9889</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
-          <div class="table-cell">3256</div>
-          <div class="table-cell">93.7605%</div>
-          <div class="table-cell">0.9803</div>
+          <div class="table-cell">-</div>
+          <div class="table-cell">94.3272%</div>
+          <div class="table-cell">0.9859</div>
       </div>
   </div>
 
