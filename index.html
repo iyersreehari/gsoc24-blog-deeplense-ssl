@@ -269,13 +269,13 @@ To understand how well SSL works with different fractions of labelled and unlabe
             </div>
             <div class="table-row">
               <div class="table-cell">ViT-S (patch size: 8)</div>
-              <div class="table-cell">-</div>
+              <div class="table-cell">3863</div>
               <div class="table-cell">94.9868%</div>
               <div class="table-cell">0.9861</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
-                <div class="table-cell">-</div>
+                <div class="table-cell">3863</div>
                 <div class="table-cell">94.9868%</div>
                 <div class="table-cell">0.9843</div>
             </div>
@@ -283,13 +283,13 @@ To understand how well SSL works with different fractions of labelled and unlabe
 
       <div class="image-row">
         <div class="image-container-one">
-            <img src="static/images/auc_supervised_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-            <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
+            <img src="static/images/auc_supervised_vit_small.png" style="max-width: 100%;">
+            <div class="image-caption">ROC for ViT-S backbone <br> with ViT-S</div>
         </div>
     
         <div class="image-container-one">
-            <img src="static/images/auc_supervised_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
-            <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+            <img src="static/images/auc_supervised_vit_base.png" style="max-width: 100%;">
+            <div class="image-caption">ROC for ViT-B backbone <br> with ViT-B</div>
         </div>
       </div>
       </div>
@@ -382,10 +382,17 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
             <div class="table-cell">0.9832</div>
         </div>
       </div>
-      <div class="image-container">
-          <img src="static/images/cm_roc_simSiam.png" alt="SimSiam Evaluation" style="max-width: 100%;">
-          <div class="image-caption">Confusion Matrix and ROC for SimSiam</div>
-      </div>
+      <div class="image-row">
+    <div class="image-container-one">
+        <img src="static/images/auc_supervised_simsiam_ssl_vit_small.png" style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-S backbone <br> with ViT-S</div>
+    </div>
+
+    <div class="image-container-one">
+        <img src="static/images/auc_supervised_simsiam_ssl_vit_base.png" style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-B backbone <br> with ViT-B</div>
+    </div>
+  </div>
       </div>
       </div>
     </div>
@@ -499,13 +506,13 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
 
   <div class="image-row">
     <div class="image-container-one">
-        <img src="static/images/auc_supervised_dino_ssl_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-        <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
+        <img src="static/images/auc_supervised_dino_ssl_vit_small.png"  style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-S backbone <br> with ViT-S</div>
     </div>
 
     <div class="image-container-one">
-        <img src="static/images/auc_supervised_dino_ssl_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
-        <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+        <img src="static/images/auc_supervised_dino_ssl_vit_base.png" style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-B backbone <br> with ViT-B</div>
     </div>
   </div>
       </div>
@@ -604,13 +611,13 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
 
   <div class="image-row">
     <div class="image-container-one">
-        <img src="static/images/auc_supervised_ibot_ssl_vit_small.png" alt="Supervised Learning Baseline" style="max-width: 100%;">
-        <div class="image-caption">ROC for Supervised Learning <br> with ViT-S</div>
+        <img src="static/images/auc_supervised_ibot_ssl_vit_small.png" style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-S backbone <br> with ViT-S</div>
     </div>
 
     <div class="image-container-one">
-        <img src="static/images/auc_supervised_ibot_ssl_vit_base.png" alt="Unsupervised Learning Baseline" style="max-width: 100%;">
-        <div class="image-caption">ROC for Supervised Learning <br> with ViT-B</div>
+        <img src="static/images/auc_supervised_ibot_ssl_vit_base.png"  style="max-width: 100%;">
+        <div class="image-caption">ROC for ViT-B backbone <br> with ViT-B</div>
     </div>
   </div>
       </div>
