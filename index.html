@@ -194,15 +194,15 @@ encoder. The following llustration of the ViT architecture is from <a href="#ref
           <img src="static/images/vit_architecture.png" alt="ViT Architecture" style="max-width: 100%;">
           <div class="image-caption">ViT Architecture from <a href="#ref1" class="citation"><u>Dosovitskiy, Alexey, et al., 2020</u></a></div>
       </div>
-For the supervised learning baseline, the ViT backbone is followed by a classifier MLP head. The hyperparameters for the classification task are chosen such that the loss computed over the validation dataset is minimized. For self-supervised learning, the ViT backbone is trained on the training dataset without the label information. The hyperparameters are chosen such that the K-NN accuracy computed over the representations obtained for the validation dataset is maximized. For evaluating the learned network, the backbone followed by a linear classifier is finetuned on the train dataset (with label information) and then evaluated over the held-out test dataset. All optimizations are performed using the Adam optimizer, with cosine annealing learning rate scheduler with warm restarts.
+For the supervised learning baseline, the ViT backbone is followed by a classifier MLP head. The hyperparameters for the classification task are chosen such that the loss computed over the validation dataset is minimized. For self-supervised learning, the ViT backbone is trained on the training dataset without the label information. For evaluating the learned network, the backbone followed by a linear classifier is finetuned on the train dataset (with label information) and then evaluated over the held-out test dataset. 
 <div class="image-container">
           <img src="static/images/sample_image_dataset.png" alt="Example images from the training dataset" style="max-width: 100%;">
           <div class="image-caption">Example images from the training dataset</div>
       </div>
 Each image has three channels or filters - b (blue filter), g (green filter) and i (near infrared filter). Detailed information about the filters are available at <a href="https://skyserver.sdss.org/dr1/en/proj/advanced/color/sdssfilters.asp"><u> SDSS Filters</u></a> <br>
-The dataset contains 1949 lens images and 2000 non-lens images. The dataset is split in a stratified manner into train dataset containing 85 percentage of the dataset, and test dataset containing the rest 15 percentage of the dataset.<br>
+The train dataset contains 2333 lens images and 1530 non-lens images. The validation dataset contains 259 lens images and 170 non-lens images. The test dataset contains 458 lens images and 300 non-lens images. <br>
 The images are center cropped to 32 × 32 pixel as this empirically resulted in better prediction accuracy. 
-To understand how well SSL works with different fractions of labelled and unlabelled data, the models are pre-trained through self supervision on the entire data and then finetuned on the labelled fraction and compared with supervised baseline trained only on that labeled fraction. 
+To understand how well SSL works with different fractions of labelled and unlabelled data, the model is pre-trained through self supervision on the entire train data and then finetuned on the labelled fraction of the train data and compared with supervised baseline trained only on that labeled fraction. This simulates the real world scenario where only a fraction of dataset may have associated labels.  
           </p>
         </div>
       </div>
@@ -235,7 +235,7 @@ To understand how well SSL works with different fractions of labelled and unlabe
                 <div class="table-cell">ViT-S (patch size: 8)</div>
                 <div class="table-cell">300</div>
                 <div class="table-cell">89.7098%</div>
-                <div class="table-cell">0.9553</div>
+                <div class="table-cell">0.9547</div>
             </div>
             <div class="table-row">
                 <div class="table-cell">ViT-B (patch size: 8)</div>
@@ -336,8 +336,8 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
         <div class="table-row">
             <div class="table-cell">ViT-S (patch size: 8)</div>
             <div class="table-cell">300</div>
-            <div class="table-cell">88.3905%</div>
-            <div class="table-cell">0.9291</div>
+            <div class="table-cell">89.8417%</div>
+            <div class="table-cell">0.9540</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
@@ -348,8 +348,8 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">600</div>
-          <div class="table-cell">91.2929%</div>
-          <div class="table-cell">0.9497</div>
+          <div class="table-cell">92.2164%</div>
+          <div class="table-cell">0.9691</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
@@ -360,8 +360,8 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">1200</div>
-          <div class="table-cell">94.1953%</div>
-          <div class="table-cell">0.9794</div>
+          <div class="table-cell">94.9868%</div>
+          <div class="table-cell">0.9843</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
@@ -371,13 +371,13 @@ augmented views \( x_1 \) and \( x_2 \) from an image \( x \). We utilize random
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
-          <div class="table-cell">-</div>
-          <div class="table-cell">93.5356%</div>
-          <div class="table-cell">0.9786</div>
+          <div class="table-cell">3863</div>
+          <div class="table-cell">95.1187%</div>
+          <div class="table-cell">0.9864</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
-            <div class="table-cell">-</div>
+            <div class="table-cell">3863</div>
             <div class="table-cell">94.8549%</div>
             <div class="table-cell">0.9832</div>
         </div>
@@ -450,50 +450,50 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
         <div class="table-row">
             <div class="table-cell">ViT-S (patch size: 8)</div>
             <div class="table-cell">300</div>
-            <div class="table-cell">92.4802%</div>
-            <div class="table-cell">0.9728</div>
+            <div class="table-cell">91.1609%</div>
+            <div class="table-cell">0.9689</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">300</div>
-            <div class="table-cell">90.1055%</div>
-            <div class="table-cell">0.9716</div>
+            <div class="table-cell">91.5567%</div>
+            <div class="table-cell">0.9703</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">600</div>
-          <div class="table-cell">92.7441%</div>
-          <div class="table-cell">0.9574</div>
+          <div class="table-cell">92.6121%</div>
+          <div class="table-cell">0.9653</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">600</div>
-            <div class="table-cell">91.6887%</div>
-            <div class="table-cell">0.9685</div>
+            <div class="table-cell">92.2164%</div>
+            <div class="table-cell">0.9667</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">1200</div>
-          <div class="table-cell">94.1953%</div>
-          <div class="table-cell">0.9884</div>
+          <div class="table-cell">93.7995%</div>
+          <div class="table-cell">0.9858</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
             <div class="table-cell">1200</div>
-            <div class="table-cell">92.6121%</div>
-            <div class="table-cell">0.9827</div>
+            <div class="table-cell">93.2718%</div>
+            <div class="table-cell">0.9798</div>
         </div>
         <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
-          <div class="table-cell">-</div>
-          <div class="table-cell">95.7784%</div>
-          <div class="table-cell">0.9875</div>
+          <div class="table-cell">3863</div>
+          <div class="table-cell">94.9868%</div>
+          <div class="table-cell">0.9865</div>
         </div>
         <div class="table-row">
             <div class="table-cell">ViT-B (patch size: 8)</div>
-            <div class="table-cell">-</div>
-            <div class="table-cell">94.3272%</div>
-            <div class="table-cell">0.9805</div>
+            <div class="table-cell">3863</div>
+            <div class="table-cell">94.1953%</div>
+            <div class="table-cell">0.9876</div>
         </div>
     </div>
 
@@ -555,50 +555,50 @@ an exponential moving average (ema) of the student parameters \( \theta_s \).
       <div class="table-row">
           <div class="table-cell">ViT-S (patch size: 8)</div>
           <div class="table-cell">300</div>
-          <div class="table-cell">92.3483%</div>
-          <div class="table-cell">0.9738</div>
+          <div class="table-cell">91.4248%</div>
+          <div class="table-cell">0.9669</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">300</div>
-          <div class="table-cell">91.1609%</div>
-          <div class="table-cell">0.9708</div>
+          <div class="table-cell">91.9525%</div>
+          <div class="table-cell">0.9668</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
         <div class="table-cell">600</div>
-        <div class="table-cell">92.3483%</div>
-        <div class="table-cell">0.9609</div>
+        <div class="table-cell">92.2164%</div>
+        <div class="table-cell">0.9631</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">600</div>
-          <div class="table-cell">91.9525%</div>
-          <div class="table-cell">0.9707</div>
+          <div class="table-cell">92.6121%</div>
+          <div class="table-cell">0.9696</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
         <div class="table-cell">1200</div>
-        <div class="table-cell">93.1398%</div>
-        <div class="table-cell">0.9827</div>
+        <div class="table-cell">93.7995%</div>
+        <div class="table-cell">0.9814</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
           <div class="table-cell">1200</div>
           <div class="table-cell">93.1398%</div>
-          <div class="table-cell">0.9867</div>
+          <div class="table-cell">0.9814</div>
       </div>
       <div class="table-row">
         <div class="table-cell">ViT-S (patch size: 8)</div>
-        <div class="table-cell">-</div>
-        <div class="table-cell">95.1187%</div>
-        <div class="table-cell">0.9889</div>
+        <div class="table-cell">3863</div>
+        <div class="table-cell">95.6464%</div>
+        <div class="table-cell">0.9906</div>
       </div>
       <div class="table-row">
           <div class="table-cell">ViT-B (patch size: 8)</div>
-          <div class="table-cell">-</div>
-          <div class="table-cell">94.3272%</div>
-          <div class="table-cell">0.9859</div>
+          <div class="table-cell">3863</div>
+          <div class="table-cell">94.4591%</div>
+          <div class="table-cell">0.9885</div>
       </div>
   </div>
 
